@@ -17,7 +17,7 @@ export const useBurgerMenu = () => {
     const handleBurgerOpen = () => {
         toggleBurger()
         if (timeoutRef.current) clearTimeout(timeoutRef.current)
-        timeoutRef.current = setTimeout(() => setIsAnimating(true), 1)
+        timeoutRef.current = setTimeout(() => setIsAnimating(true), 100)
     }
 
     const handleBurgerClose = () => {
