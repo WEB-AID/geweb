@@ -18,7 +18,7 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
     const pathname = usePathname() || ''
     const currentLocale = i18n.language
     const isBurgerOpen = useBurgerMenuStore((store) => store.isBurgerOpen)
-    const toggleBurger = useBurgerMenuStore((store) => store.toogleBurger)
+    const closeBurger = useBurgerMenuStore((store) => store.closeBurger)
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const newLocale = event.target.value
@@ -29,7 +29,7 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
         document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/;SameSite=Lax`
 
         if (isBurgerOpen) {
-            toggleBurger()
+            closeBurger()
         }
 
         if (currentLocale === i18nConfig.defaultLocale) {
