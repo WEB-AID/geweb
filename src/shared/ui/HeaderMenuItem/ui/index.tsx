@@ -22,7 +22,7 @@ export function HeaderMenuItem({
                         : 'hover:text-orange-600'
                 }`}
             >
-                {name}
+                <span>{name}</span>
             </Link>
         </li>
     )

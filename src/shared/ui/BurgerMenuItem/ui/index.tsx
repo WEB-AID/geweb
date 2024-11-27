@@ -22,7 +22,7 @@ export function BurgerMenuItem({
                         : 'hover:scale-105 hover:bg-orange-700'
                 }`}
             >
-                {name}
+                <span>{name}</span>
             </Link>
         </li>
     )
