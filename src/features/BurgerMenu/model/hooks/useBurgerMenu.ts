@@ -10,7 +10,6 @@ export const useBurgerMenu = () => {
     const isBurgerOpen = useBurgerMenuStore((state) => state.isBurgerOpen)
     const openBurger = useBurgerMenuStore((state) => state.openBurger)
     const closeBurger = useBurgerMenuStore((state) => state.closeBurger)
-
     const timeoutRef = useRef(null) as MutableRefObject<null | ReturnType<
         typeof setTimeout
     >>
