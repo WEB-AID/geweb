@@ -27,7 +27,7 @@ export default function Overlay({
             <Portal>
                 <div
                     className={clsx(
-                        `w-72 fixed inset-0 -translate-x-full transition-transform duration-700 ease-in-out md:hidden bg-primary-brown shadow-outer-brown z-50`,
+                        `w-72 fixed inset-0 -translate-x-full transition-transform duration-500 ease-in-out md:hidden bg-primary-brown shadow-outer-brown z-50`,
                         isAnimating && 'translate-x-0'
                     )}
                 >

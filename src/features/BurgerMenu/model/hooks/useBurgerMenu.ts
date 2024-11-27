@@ -2,22 +2,23 @@ import { MutableRefObject, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useBurgerMenuStore } from '@/entities/BurgerMenu'
 
-const ANIMATION_DELAY = 700 as const
+const ANIMATION_DELAY = 400 as const
 
 export const useBurgerMenu = () => {
     const [isAnimating, setIsAnimating] = useState<boolean>(false)
     const router = useRouter()
     const isBurgerOpen = useBurgerMenuStore((state) => state.isBurgerOpen)
-    const toggleBurger = useBurgerMenuStore((state) => state.toogleBurger)
+    const openBurger = useBurgerMenuStore((state) => state.openBurger)
+    const closeBurger = useBurgerMenuStore((state) => state.closeBurger)
 
     const timeoutRef = useRef(null) as MutableRefObject<null | ReturnType<
         typeof setTimeout
     >>
 
     const handleBurgerOpen = () => {
-        toggleBurger()
+        openBurger()
         if (timeoutRef.current) clearTimeout(timeoutRef.current)
-        timeoutRef.current = setTimeout(() => setIsAnimating(true), 100)
+        timeoutRef.current = setTimeout(() => setIsAnimating(true), 50)
     }
 
     const handleBurgerClose = () => {
@@ -28,7 +29,7 @@ export const useBurgerMenu = () => {
         }
 
         setTimeout(() => {
-            toggleBurger()
+            closeBurger()
         }, ANIMATION_DELAY)
     }
 

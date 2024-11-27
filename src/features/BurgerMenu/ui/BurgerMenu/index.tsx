@@ -62,7 +62,9 @@ export function BurgerMenu({ TopActionSlot }: BurgerMenuProps) {
                             variant="outline"
                             size="icon"
                             onClick={handleBurgerClose}
-                            className="absolute top-4 -right-14 z-20"
+                            className={`absolute top-4 -right-14 z-20 ${
+                                !isAnimating ? 'hidden' : ''
+                            }`}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
