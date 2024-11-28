@@ -39,7 +39,7 @@ export function BurgerMenu({ TopActionSlot }: BurgerMenuProps) {
                     handleBurgerClose={handleBurgerClose}
                 >
                     <aside className={`w-72 fixed flex inset-0`}>
-                        <ul className="w-3/5 p-12 flex flex-col gap-16 text-slate-200">
+                        <ul className="w-2/3 p-10 pt-16 flex flex-col gap-12 text-slate-200">
                             {menuItems.map((item) => (
                                 <BurgerMenuItem
                                     key={item.path}

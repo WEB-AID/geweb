@@ -26,7 +26,7 @@ export function LoginModal({
             <DialogTrigger className={clsx('', TriggerClassName)} asChild>
                 <Button
                     variant="outline"
-                    className="border-0 h-2 bg-orange-900 text-slate-100 p-3 font-mono font-semibold"
+                    className="border-0 h-2 bg-orange-900 text-slate-100 p-3 font-sans font-semibold"
                 >
                     LOGIN
                 </Button>
