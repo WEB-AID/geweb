@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import initTranslations, { i18nNamespaces } from '../i18n'
 import clsx from 'clsx'
 import './globals.css'
-import { Comfortaa, Schibsted_Grotesk } from 'next/font/google'
+import { Comfortaa, Rubik } from 'next/font/google'
 import TranslationsProvider from '@/app/providers/TranslationsProvider'
 import { Header } from '@/widgets/Header'
 import { Footer } from '@/widgets/Footer'
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
         'Pigs growing is our way to show - how can food change, depends on technology and professionality.',
 }
 
-const fontEn = Schibsted_Grotesk({
+const fontEn = Rubik({
     subsets: ['latin', 'latin-ext'],
-    weight: ['500'],
+    weight: ['400'],
 })
 const fontRu = Comfortaa({
     subsets: ['cyrillic', 'cyrillic-ext'],

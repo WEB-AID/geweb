@@ -65,7 +65,7 @@ export function Footer() {
             {/* COPYRIGHT */}
             <div className="h-10 mt-4 flex items-center justify-center bg-orange-900">
                 <p className="text-center text-gray-800 font-mono">
-                    Copyright © 2024 Georgian House LLC
+                    Copyright © 2025 Georgian House LLC
                 </p>
             </div>
         </footer>

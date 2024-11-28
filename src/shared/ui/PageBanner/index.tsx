@@ -9,7 +9,16 @@ interface PageBannerProps {
 }
 
 export default function PageBanner({ src, alt }: PageBannerProps) {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+    const currentLocale = i18n.language as 'en' | 'ru' | 'ka'
+
+    const localeStyles = {
+        en: 'max-[600px]:text-sm max-[600px]:p-0 p-2 text-xl md:text-base lg:text-2xl xl:text-4xl font-extrabold md:p-4 lg:p-0',
+        ru: 'max-[600px]:text-xs md:text-sm lg:text-xl xl:text-2xl 2xl:text-3xl xl:p-0 md:p-1 lg:p-0',
+        ka: 'max-[600px]:text-sm max-[600px]:p-0 p-4 text-base md:text-base lg:text-xl xl:text-3xl lg:p-4 xl:p-0 md:p-1',
+    }
+
+    const textClasses = localeStyles[currentLocale] || ''
 
     return (
         <div className="relative">
@@ -19,9 +28,11 @@ export default function PageBanner({ src, alt }: PageBannerProps) {
                 width="0"
                 height="0"
                 sizes="100vw"
-                className="w-full max-[600px]:h-60 h-80 lg:h-96 min-[1280px]:h-[36rem]"
+                className="w-full max-[600px]:h-60 h-80 lg:h-96 xl:h-[36rem]"
             />
-            <p className="w-1/2 py-2 absolute top-4 left-10 md:w-4/5 md:mt-8 md:top-10 lg:mt-4 lg:top-22 text-white text-xs md:text-lg lg:text-3xl font-bold">
+            <p
+                className={`w-2/3 md:w-2/5 lg:w-5/12 xl:w-2/5 absolute top-4 left-4 lg:top-6 lg:left-6 xl:top-12 xl:left-16 text-white/80 ${textClasses}`}
+            >
                 {t('plantPhotoText')}
             </p>
         </div>

@@ -16,7 +16,7 @@ export function HeaderMenuItem({
         <li className={`cursor-pointer `} onClick={onClick}>
             <Link
                 href={path}
-                className={`text-center whitespace-nowrap min-[1280px]:text-xl `}
+                className={` font-medium text-center whitespace-nowrap lg:text-xl min-[1280px]:text-xl`}
             >
                 <span
                     className={`${

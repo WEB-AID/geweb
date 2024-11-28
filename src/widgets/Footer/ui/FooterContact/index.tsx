@@ -14,7 +14,7 @@ export function FooterContact({
                 <h2 id="footer-contact" className="text-lg text-orange-500">
                     {t('footer:contactUs')}
                 </h2>
-                <address className="mt-2 flex flex-col gap-y-1 not-italic font-sans font-medium">
+                <address className="mt-2 flex flex-col gap-y-1 not-italic font-medium">
                     <a
                         href="https://www.google.com/maps/place/Akaurta,+1100,+Bolnisi,+Georgia"
                         target="_blank"
