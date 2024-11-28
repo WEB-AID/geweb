@@ -13,16 +13,20 @@ export function HeaderMenuItem({
     onClick?: () => void
 }) {
     return (
-        <li className="cursor-pointer" onClick={onClick}>
+        <li className={`cursor-pointer `} onClick={onClick}>
             <Link
                 href={path}
-                className={`py-2 text-center whitespace-nowrap ${
-                    isActivePath(path, pathname)
-                        ? 'border-b-4 border-orange-300 border-opacity-75 after:content-[""] after:block cursor-default'
-                        : 'hover:text-orange-600'
-                }`}
+                className={`text-center whitespace-nowrap min-[1280px]:text-xl `}
             >
-                <span>{name}</span>
+                <span
+                    className={`${
+                        isActivePath(path, pathname)
+                            ? 'border-b-4 border-orange-300 border-opacity-75 cursor-default'
+                            : 'hover:text-orange-600'
+                    }`}
+                >
+                    {name}
+                </span>
             </Link>
         </li>
     )
