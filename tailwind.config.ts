@@ -80,6 +80,7 @@ export default {
                     'inset 0 0 10px 5px rgba(180, 180, 180, 0.6)',
                 'outer-orange': '0 0 15px rgba(255, 165, 0, 0.4)',
                 'outer-brown': '0 0 15px rgba(66, 32, 6)',
+                '3xl': '0 0px 15px 0px rgba(0, 0, 0, 0.4)',
             },
             width: {
                 '100vh': '100vh',
