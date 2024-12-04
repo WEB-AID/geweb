@@ -13,7 +13,7 @@ export default function Greetings() {
                 <Button
                     variant="default"
                     size="sm"
-                    className="h-2 p-3 lg:h-10 absolute max-[600px]:-left-16 max-[600px]:top-0 left-2 top-2 lg:top-0 lg:left-0 xl:top-2 xl:left-12 border-0 bg-orange-600 font-sans font-bold"
+                    className="md:text-sm h-2 p-3 lg:h-10 absolute max-[600px]:-left-16 max-[600px]:top-0 left-2 top-2 md:-left-6 md:top-2 lg:top-0 lg:-left-4 xl:top-2 xl:left-8 border-0 bg-orange-600 font-sans font-bold"
                 >
                     {t('greetingsButton')}
                 </Button>
