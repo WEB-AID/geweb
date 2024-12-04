@@ -4,7 +4,7 @@ import PageBanner from '@/shared/ui/PageBanner'
 import Greetings from './Greetings'
 import OurAdwantages from './OurAdvantages'
 import SwiperBlock from './SwiperBlock'
-// import MapBlock from './MapBlock'
+import MapBlock from './MapBlock'
 // import { ContactForm } from '@/features/ContactForm/ui'
 
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
                 <Greetings />
                 <OurAdwantages />
                 <SwiperBlock />
-                {/* <MapBlock />
-                <ContactForm /> */}
+                <MapBlock />
+                {/* <ContactForm /> */}
             </section>
         </main>
     )

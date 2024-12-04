@@ -2,10 +2,15 @@
 
 import { Button } from '@/shared/ui'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 
 export default function Greetings() {
     const { t } = useTranslation()
+    const router = useRouter()
+    const handleMenuItemClick = (path: string) => {
+        router.push(path)
+    }
 
     return (
         <div className="mt-8 px-6 flex flex-col items-center md:flex-row bg-gray-100">
@@ -14,6 +19,9 @@ export default function Greetings() {
                     variant="default"
                     size="sm"
                     className="md:text-sm h-2 p-3 lg:h-10 absolute max-[600px]:-left-16 max-[600px]:top-0 left-2 top-2 md:-left-6 md:top-2 lg:top-0 lg:-left-4 xl:top-2 xl:left-8 border-0 bg-orange-600 font-sans font-bold"
+                    onClick={() => {
+                        handleMenuItemClick('contact')
+                    }}
                 >
                     {t('greetingsButton')}
                 </Button>

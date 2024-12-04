@@ -20,7 +20,7 @@ import 'swiper/css/autoplay'
 
 export default function SwiperBlock() {
     return (
-        <div className="border-2 border-black md:w-1/2 w-4/5 h-72 md:h-96 flex mx-auto mt-8">
+        <div className="border-2 border-orange-400 w-4/5 min-[601px]:w-[500px] md:w-[600px] xl:w-1/2  h-40 min-[601px]:h-52 md:h-3/4 flex mx-auto mt-10 md:mt-20">
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -31,7 +31,7 @@ export default function SwiperBlock() {
                     delay: 2000, // Задержка в миллисекундах (3 секунды)
                     disableOnInteraction: false, // Не отключать автопрокрутку при взаимодействии с слайдером
                 }}
-                pagination={{ clickable: true }}
+                // pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
@@ -76,7 +76,6 @@ export default function SwiperBlock() {
                         className="h-96 w-full"
                     />
                 </SwiperSlide>
-                ...
             </Swiper>
         </div>
     )
