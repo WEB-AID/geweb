@@ -20,7 +20,7 @@ import 'swiper/css/autoplay'
 
 export default function SwiperBlock() {
     return (
-        <div className="border-2 border-orange-400 w-4/5 min-[601px]:w-[500px] md:w-[600px] xl:w-1/2  h-40 min-[601px]:h-52 md:h-3/4 flex mx-auto mt-10 md:mt-20">
+        <div className="border-2 border-orange-400 w-4/5 min-[601px]:w-[500px] md:w-[600px] xl:w-1/2 h-40 min-[601px]:h-52 md:h-3/4 flex mx-auto mt-8 lg:mt-20">
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
