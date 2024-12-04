@@ -41,6 +41,9 @@ export default function Greetings() {
                 <p className="self-start text-sm lg:text-base 2xl:text-lg text-gray-600">
                     {t('greetingsText')}
                 </p>
+                <p className="mt-1 text-sm lg:text-base 2xl:text-lg text-gray-600">
+                    {t('geneticText')}
+                </p>
             </article>
         </div>
     )
