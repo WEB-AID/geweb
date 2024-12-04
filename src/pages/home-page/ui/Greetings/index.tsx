@@ -13,7 +13,7 @@ export default function Greetings() {
                 <Button
                     variant="default"
                     size="sm"
-                    className="h-2 p-3 lg:h-10 absolute max-[600px]:-left-10 max-[600px]:top-2 left-2 top-2 lg:top-0 lg:left-0 xl:top-4 xl:left-4 border-0 bg-orange-600 font-sans font-bold"
+                    className="h-2 p-3 lg:h-10 absolute max-[600px]:-left-16 max-[600px]:top-0 left-2 top-2 lg:top-0 lg:left-0 xl:top-2 xl:left-12 border-0 bg-orange-600 font-sans font-bold"
                 >
                     {t('greetingsButton')}
                 </Button>
@@ -26,7 +26,7 @@ export default function Greetings() {
                     className="w-auto"
                 />
             </div>
-            <article className="w-3/4 flex flex-center items-center flex-col md:w-2/5 lg:w-1/3 max-[767px]:mt-4 md:ml-2 md:mr-auto md:px-0 max-[767px]:mx-auto">
+            <article className="w-3/4 md:w-2/5 lg:w-80 flex flex-center items-center flex-col max-[767px]:mt-4 md:ml-2 md:mr-auto md:px-0 max-[767px]:mx-auto">
                 <h1 className="self-start md:mb-4 text-sm font-bold lg:text-xl">
                     {t('common:georgianHouse')}
                 </h1>
