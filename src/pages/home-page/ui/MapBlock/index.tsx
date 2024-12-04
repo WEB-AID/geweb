@@ -12,7 +12,7 @@ const Map = () => {
         )
     }
     return (
-        <div className="w-3/4 lg:w-3/5 mx-auto flex flex-col md:flex-row gap-4 items-center justify-center my-10 lg:my-20">
+        <div className="w-3/4 lg:w-3/5 mx-auto flex flex-col md:flex-row gap-4 items-center justify-center my-10 lg:my-20 font-extrabold">
             <div className="md:w-1/3 flex flex-col h-32 md:h-60">
                 <span className="mb-auto text-sm lg:text-base">
                     {t('mapText')}
