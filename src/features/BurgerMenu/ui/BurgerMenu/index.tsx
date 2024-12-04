@@ -54,7 +54,7 @@ export function BurgerMenu({ TopActionSlot }: BurgerMenuProps) {
                         </ul>
                         {TopActionSlot}
                         {/* LANGUAGE SELECTOR */}
-                        <div className="absolute bottom-2 right-2 md:hidden md:right-8">
+                        <div className="absolute bottom-6 right-2 md:hidden md:right-8">
                             <LanguageSelector />
                         </div>
                         {/* CLOSE BUTTON */}

@@ -20,13 +20,13 @@ const Map = () => {
                 <Button
                     variant="default"
                     size="sm"
-                    className="border-0 bg-orange-600 font-sans font-bold"
+                    className="border-0 bg-orange-600 font-sans font-bold mt-1"
                     onClick={handleDirectionsClick}
                 >
                     {t('mapButton')}
                 </Button>
             </div>
-            <div className="max-[767px]:mt-4 md:ml-12 w-full md:w-96 lg:w-1/2 flex items-center justify-center">
+            <div className="max-[767px]:mt-3 md:ml-12 w-full md:w-96 lg:w-1/2 flex items-center justify-center">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13376.617626814921!2d44.43961131019164!3d41.463423518722664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4043eb7a014c0f17%3A0x71c96f892c224569!2sAkaurta%20pig%20farm!5e1!3m2!1sru!2sua!4v1733056020151!5m2!1sru!2sua"
                     width="0"
