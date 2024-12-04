@@ -1,70 +1,69 @@
 'use client'
 
 import Image from 'next/image'
-// import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 export default function OurAdwantages() {
-    // const { t } = useTranslation()
+    const { t } = useTranslation()
 
     return (
-        <section className="bg-gray-100 py-12 px-6 md:px-24 text-center font-extrabold">
-            {/* Header */}
-            <h2 className="text-orange-600 md:text-xm  font-extrabold">
-                Refrigerated Trucks in London: A Costly Carbon Dilemma
+        <section className="mt-8 md:px-24 lg:px-0 bg-gray-100 text-center font-extrabold">
+            <h2 className="w-4/5 mx-auto text-sm md:text-base lg:text-lg text-orange-600 font-extrabold">
+                {t('ourAdvantageFirstHeader')}
             </h2>
-            <p className="text-xl md:text-2xl font-bold text-black mb-6">
-                Redefining Cold Chain Logistics for the Future
+            <p className="w-4/5 mx-auto mt-2 text-sm md:text-base lg:text-lg font-bold text-black">
+                {t('ourAdvantageSecondHeader')}
             </p>
             {/* ADVANTAGE BLOCKS */}
-            <div className="mx-auto w-3/5 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex items-center gap-2 shadow-3xl rounded-lg p-6 bg-white">
+            <div className="w-4/5 mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:w-auto lg:w-4/5 xl:w-2/3">
+                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
                     <Image
-                        src="/iconCo2.png"
+                        src="/iconPig64.png"
                         alt="Plant logo"
                         width="100"
                         height="100"
-                        className="w-16 h-16"
+                        className="w-16 h-16 mr-auto md:mx-auto"
                     />
-                    <div>
-                        <h3 className="text-2xl font-bold text-orange-600">
-                            83,500 tCO2
+                    <div className="min-[601px]:w-96 md:w-auto md:my-auto">
+                        <h3 className="text-lg xl:text-2xl font-bold text-orange-600">
+                            {t('geneticHeader')}
                         </h3>
-                        <p className="text-gray-600 mt-2">
-                            Annually from Food Delivery in London
+                        <p className="mt-1 text-sm lg:text-base 2xl:text-lg text-gray-600">
+                            {t('geneticText')}
                         </p>
                     </div>
                 </div>
-                <div className="flex items-center gap-2 shadow-3xl rounded-lg p-6 bg-white">
+                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
                     <Image
-                        src="/iconCo2.png"
+                        src="/iconRezept64.png"
                         alt="Plant logo"
                         width="100"
                         height="100"
-                        className="w-16 h-16"
+                        className="w-16 h-16 mr-auto md:mx-auto"
                     />
-                    <div>
-                        <h3 className="text-2xl font-bold text-orange-600">
-                            83,500 tCO2
+                    <div className="min-[601px]:w-96 md:w-auto md:my-auto">
+                        <h3 className="text-lg xl:text-2xl font-bold text-orange-600">
+                            {t('feedingHeader')}
                         </h3>
-                        <p className="text-gray-600 mt-2">
-                            Annually from Food Delivery in London
+                        <p className="mt-1 text-sm lg:text-base 2xl:text-lg text-gray-600">
+                            {t('feedingText')}
                         </p>
                     </div>
                 </div>
-                <div className="flex items-center gap-2 shadow-3xl rounded-lg p-6 bg-white">
+                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
                     <Image
-                        src="/iconCo2.png"
+                        src="/iconISO64.png"
                         alt="Plant logo"
                         width="100"
                         height="100"
-                        className="w-16 h-16"
+                        className="w-16 h-16 mr-auto md:mx-auto"
                     />
-                    <div>
-                        <h3 className="text-2xl font-bold text-orange-600">
-                            83,500 tCO2
+                    <div className="min-[601px]:w-96 md:w-auto md:my-auto">
+                        <h3 className="text-lg xl:text-2xl font-bold text-orange-600">
+                            {t('certificationHeader')}
                         </h3>
-                        <p className="text-gray-600 mt-2">
-                            Annually from Food Delivery in London
+                        <p className="mt-1 text-sm lg:text-base 2xl:text-lg text-gray-600">
+                            {t('certificationText')}
                         </p>
                     </div>
                 </div>
