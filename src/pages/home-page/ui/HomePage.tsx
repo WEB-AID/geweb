@@ -5,7 +5,8 @@ import Greetings from './Greetings'
 import OurAdwantages from './OurAdvantages'
 import SwiperBlock from './SwiperBlock'
 import MapBlock from './MapBlock'
-// import { ContactForm } from '@/features/ContactForm/ui'
+import { ContactForm } from '@/features/ContactForm/ui'
+import { ContactFormModal } from '@/features/ContactForm'
 
 export default function Home() {
     return (
@@ -16,7 +17,9 @@ export default function Home() {
                 <OurAdwantages />
                 <SwiperBlock />
                 <MapBlock />
-                {/* <ContactForm /> */}
+                <ContactForm
+                    ModalSlot={<ContactFormModal TriggerClassName="" />}
+                />
             </section>
         </main>
     )

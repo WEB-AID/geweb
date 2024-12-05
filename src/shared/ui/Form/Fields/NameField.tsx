@@ -1,11 +1,12 @@
 import clsx from 'clsx'
 import { useController } from 'react-hook-form'
-import { Textarea } from '../../shadcn/textArea'
+import { Input } from '../../shadcn/input'
 
-interface TextFieldProps extends React.ComponentProps<'textarea'> {
+interface TextFieldProps extends React.ComponentProps<typeof Input> {
     name: string
 }
-export const TextField = ({
+
+export const NameField = ({
     placeholder,
     // prefix,
     className,
@@ -15,15 +16,14 @@ export const TextField = ({
     const { field } = useController({ name })
 
     return (
-        <Textarea
+        <Input
             onChange={field.onChange}
             value={field.value}
             className={clsx(
-                'text-[16px] leading-[20px] rounded-[6px] w-full p-[12px] bg-bg3 border-[1px] placeholder:text-txt1 placeholder:opacity-30 placeholder:font-[500]',
+                'h-[40px] text-[16px] leading-[16px] rounded-[6px] w-full p-[12px] bg-bg3 border-[1px] placeholder:text-txt1 placeholder:opacity-30 placeholder:font-[500]',
                 className
             )}
             placeholder={placeholder}
-            rows={5} // Задаем количество строк
             {...props}
         />
     )

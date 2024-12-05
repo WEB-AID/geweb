@@ -9,15 +9,18 @@ import { LoginModal } from '@/features/Login'
 import { useBurgerMenuStore } from '@/entities/BurgerMenu'
 import HeaderMenu from './HeaderMenu'
 import styles from './index.module.css'
+import { useSyncHeaderMargin } from '../model/useSyncHeaderMargin'
 
 export function Header() {
     const pathname = usePathname()
 
     const isBurgerOpen = useBurgerMenuStore((state) => state.isBurgerOpen)
 
+    useSyncHeaderMargin()
+
     return (
         <header
-            className={`w-full h-24 fixed lg:h-32 md:mr-10 bg-white shadow-inner-premium-gray text-black z-20`}
+            className={`h-24 fixed lg:h-32 bg-white shadow-inner-premium-gray text-black z-20`}
         >
             <div
                 className={`h-full relative flex md:justify-center ${

@@ -1,34 +1,49 @@
 'use client'
 
 import { AppForm } from '@/shared/ui/Form'
-import { TextField } from '@/shared/ui/Form/Fields/TextField'
+import { NameField } from '@/shared/ui/Form/Fields/NameField'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { defaultValues, Schema } from '../model/scheme'
+import { TextField } from '@/shared/ui/Form/Fields/TextField'
+import { ReactNode } from 'react'
 
 type ContactFormType = z.infer<typeof Schema>
 
-export function ContactForm() {
+interface ModalSlot {
+    ModalSlot: ReactNode
+}
+
+export function ContactForm({ ModalSlot }: ModalSlot) {
     const formProps = useForm<ContactFormType>({
         resolver: zodResolver(Schema),
         mode: 'all',
         defaultValues,
     })
+    const { reset } = formProps // Деструктурируем метод reset
 
     const onSubmit = (data: ContactFormType) => {
         console.log(data)
+        reset() // Сбрасываем значения формы после сабмита
     }
 
     return (
         <AppForm
-            className="border-2 border-black p-4 w-[300px] h-96 flex mx-auto my-auto"
+            className="p-4 w-4/5 h-96 flex flex-col mx-auto my-auto"
             onSubmit={onSubmit}
             {...formProps}
         >
-            <TextField name="name" />
-            <TextField name="surname" />
-            <button type="submit">submit</button>
+            <h2 className="text-orange-500 text-xl font-bold">Contact us</h2>
+            <NameField placeholder="Alex" name="name" />
+            <NameField placeholder="Richardson" name="surname" />
+            <NameField placeholder="+995-555-555-555" name="phoneNumber" />
+            <TextField
+                placeholder="Hi! Call me please! I want to speak about pigs =)"
+                name="message"
+                className="h-40"
+            />
+            {ModalSlot}
         </AppForm>
     )
 }

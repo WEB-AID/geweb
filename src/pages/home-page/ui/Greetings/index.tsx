@@ -18,7 +18,7 @@ export default function Greetings() {
                 <Button
                     variant="default"
                     size="sm"
-                    className="md:text-sm h-2 p-3 lg:h-10 absolute max-[600px]:-left-8 max-[600px]:top-0 left-2 top-2 md:-left-6 md:top-2 lg:top-0 lg:-left-4 xl:top-2 xl:left-8 border-0 bg-orange-600 font-sans font-bold shadow-outer-greetings"
+                    className="md:text-sm h-2 p-3 lg:h-10 absolute max-[500px]:-left-14 max-[500px]:top-0 max-[600px]:-left-8 max-[600px]:top-2 left-2 top-2 md:-left-6 md:top-2 lg:top-0 lg:-left-4 xl:top-2 xl:left-8 border-0 bg-orange-600 font-sans font-bold shadow-outer-greetings"
                     onClick={() => {
                         handleMenuItemClick('contact')
                     }}

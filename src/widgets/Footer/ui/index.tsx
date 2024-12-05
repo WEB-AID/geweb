@@ -9,7 +9,7 @@ export function Footer() {
     const { t } = useTranslation()
 
     return (
-        <footer className="h-min pt-4 text-gray-300 bg-primary-brown">
+        <footer className="pt-4 text-gray-300 bg-primary-brown">
             {/* OURGOAL+MENU+CONTACT */}
             <div className="mx-8 mt-4 flex justify-center max-[767px]:flex-col">
                 <FooterInfo additionalClass="md:mr-auto lg:mr-0" />

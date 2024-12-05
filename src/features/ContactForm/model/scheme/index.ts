@@ -2,8 +2,10 @@ import { z } from 'zod'
 
 // Схема
 export const Schema = z.object({
-    name: z.string().default('123'),
-    surname: z.string().default('333'),
+    name: z.string().default(''),
+    surname: z.string().default(''),
+    phoneNumber: z.string().default(''),
+    message: z.string().default(''),
 })
 
 // Генерация defaultValues на основе схемы
