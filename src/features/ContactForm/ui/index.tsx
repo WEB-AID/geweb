@@ -8,6 +8,7 @@ import { z } from 'zod'
 import { defaultValues, Schema } from '../model/scheme'
 import { TextField } from '@/shared/ui/Form/Fields/TextField'
 import { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type ContactFormType = z.infer<typeof Schema>
 
@@ -16,6 +17,7 @@ interface ModalSlot {
 }
 
 export function ContactForm({ ModalSlot }: ModalSlot) {
+    const { t } = useTranslation()
     const formProps = useForm<ContactFormType>({
         resolver: zodResolver(Schema),
         mode: 'all',
@@ -34,7 +36,9 @@ export function ContactForm({ ModalSlot }: ModalSlot) {
             onSubmit={onSubmit}
             {...formProps}
         >
-            <h2 className="text-orange-500 text-xl font-bold">Contact us</h2>
+            <h2 className="text-orange-500 text-xl font-bold">
+                {t('common:contactUsTitle')}
+            </h2>
             <NameField placeholder="Alex" name="name" />
             <NameField placeholder="Richardson" name="surname" />
             <NameField placeholder="+995-555-555-555" name="phoneNumber" />
