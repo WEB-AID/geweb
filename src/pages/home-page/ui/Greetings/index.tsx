@@ -14,11 +14,11 @@ export default function Greetings() {
 
     return (
         <div className="mt-6 px-6 flex flex-col items-center md:flex-row bg-gray-100 font-extrabold">
-            <div className="w-3/4 md:w-96 lg:w-2/5 relative md:ml-auto max-[767px]:mx-auto md:mr-2">
+            <div className="w-3/4 md:w-96 lg:w-2/5 relative md:ml-auto max-[767px]:mx-auto md:mr-4">
                 <Button
                     variant="default"
                     size="sm"
-                    className="md:text-sm h-2 p-3 lg:h-10 absolute max-[600px]:-left-8 max-[600px]:top-0 left-2 top-2 md:-left-8 md:top-2 lg:top-0 lg:-left-4 xl:top-2 xl:left-8 border-0 bg-orange-600 font-sans font-bold"
+                    className="md:text-sm h-2 p-3 lg:h-10 absolute max-[600px]:-left-8 max-[600px]:top-0 left-2 top-2 md:-left-6 md:top-2 lg:top-0 lg:-left-4 xl:top-2 xl:left-8 border-0 bg-orange-600 font-sans font-bold shadow-outer-greetings"
                     onClick={() => {
                         handleMenuItemClick('contact')
                     }}
@@ -34,7 +34,7 @@ export default function Greetings() {
                     className="w-auto"
                 />
             </div>
-            <article className="w-4/5 md:w-2/5 lg:w-80 flex flex-center items-center flex-col max-[767px]:mt-4 md:ml-2 md:mr-auto md:px-0 max-[767px]:mx-auto">
+            <article className="w-4/5 md:w-2/5 lg:w-80 flex flex-center items-center flex-col max-[767px]:mt-4 md:ml-4 md:mr-auto md:px-0 max-[767px]:mx-auto">
                 <h1 className="self-start md:mb-4 text-base font-bold lg:text-xl">
                     {t('common:georgianHouse')}
                 </h1>

@@ -12,7 +12,7 @@ const Map = () => {
         )
     }
     return (
-        <div className="w-3/4 lg:w-3/5 mx-auto flex flex-col md:flex-row gap-4 items-center justify-center my-10 lg:my-20 font-extrabold">
+        <div className="w-3/4 lg:w-3/5 mx-auto flex flex-col md:flex-row gap-4 items-center justify-center my-10 lg:my-16 font-extrabold">
             <div className="md:w-1/3 flex flex-col h-32 min-[600px]:h-24 md:h-60">
                 <span className="mb-auto text-sm lg:text-base">
                     {t('mapText')}
@@ -31,7 +31,7 @@ const Map = () => {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13376.617626814921!2d44.43961131019164!3d41.463423518722664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4043eb7a014c0f17%3A0x71c96f892c224569!2sAkaurta%20pig%20farm!5e1!3m2!1sru!2sua!4v1733056020151!5m2!1sru!2sua"
                     width="0"
                     height="0"
-                    className="border-0 w-full h-60 2xl:h-80"
+                    className="border-0 w-full h-60 2xl:h-80 shadow-outer-brown"
                     // allowfullscreen=""
                     loading="lazy"
                     // referrerpolicy="no-referrer-when-downgrade"
