@@ -7,7 +7,7 @@ export default function OurAdwantages() {
     const { t } = useTranslation()
 
     return (
-        <section className="lg:mt-16 mt-8 md:px-24 lg:px-0 bg-gray-100 text-center font-extrabold">
+        <section className="lg:mt-16 mt-8 md:px-24 lg:px-0 text-center font-extrabold">
             <h2 className="w-4/5 mx-auto text-sm md:text-base lg:text-lg text-orange-600 font-extrabold">
                 {t('ourAdvantageFirstHeader')}
             </h2>

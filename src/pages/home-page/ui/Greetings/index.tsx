@@ -13,7 +13,7 @@ export default function Greetings() {
     }
 
     return (
-        <div className="mt-6 px-6 flex flex-col items-center md:flex-row bg-gray-100 font-extrabold">
+        <div className="mt-6 px-6 flex flex-col items-center md:flex-row font-extrabold">
             <div className="w-3/4 md:w-96 lg:w-2/5 relative md:ml-auto max-[767px]:mx-auto md:mr-4">
                 <Button
                     variant="default"

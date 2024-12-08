@@ -32,7 +32,7 @@ export function ContactForm({ ModalSlot }: ModalSlot) {
 
     return (
         <AppForm
-            className="p-4 w-4/5 h-96 flex flex-col mx-auto my-auto"
+            className="p-4 w-4/5 lg:w-1/2 h-96 flex flex-col mx-auto my-auto"
             onSubmit={onSubmit}
             {...formProps}
         >

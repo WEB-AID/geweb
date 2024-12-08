@@ -3,7 +3,7 @@
 import { Button } from '@/shared/ui'
 import { useTranslation } from 'react-i18next'
 
-const Map = () => {
+export function MapBlock() {
     const { t } = useTranslation()
     const handleDirectionsClick = () => {
         window.open(
@@ -40,5 +40,3 @@ const Map = () => {
         </div>
     )
 }
-
-export default Map

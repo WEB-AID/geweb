@@ -20,11 +20,9 @@ header {
     width: calc(100% - var(--body-margin-right, 0px));
 }
 
-/* @media (max-width: 767px) {
-    header {
-        width: calc(100% - var(--body-margin-right, 0px))
-    }
-} */
+circle {
+    transition: stroke-dashoffset 0.2s ease;
+}
 
 @layer base {
     :root {

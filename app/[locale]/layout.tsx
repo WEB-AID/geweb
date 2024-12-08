@@ -9,6 +9,7 @@ import TranslationsProvider from '@/app/providers/TranslationsProvider'
 import { Header } from '@/widgets/Header'
 import { Footer } from '@/widgets/Footer'
 import Loading from './loading'
+import { ScrollCircle } from '@/features/ScrollCircle'
 
 export const metadata: Metadata = {
     title: 'Georgian House LLC',
@@ -65,9 +66,12 @@ export default async function RootLayout({
                 >
                     <Header />
                     <Suspense fallback={<Loading />}>
-                        <div className="pt-24 lg:pt-32">{children}</div>
+                        <div className="pt-24 lg:pt-32 bg-gray-50">
+                            {children}
+                        </div>
                     </Suspense>
                     <Footer />
+                    <ScrollCircle />
                 </TranslationsProvider>
                 <div id="portal-root" />
             </body>

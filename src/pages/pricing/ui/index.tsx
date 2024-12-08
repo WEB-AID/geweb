@@ -1,3 +1,9 @@
+import { PriceFiles } from '@/features/PriceFilesBlock'
+
 export default function Pricing() {
-    return <div>1PRICING11</div>
+    return (
+        <div>
+            <PriceFiles />
+        </div>
+    )
 }

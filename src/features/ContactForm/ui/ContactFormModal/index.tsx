@@ -21,14 +21,20 @@ export function ContactFormModal({
     TriggerClassName,
     ContentBodyClassName,
 }: LoginModal) {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+    const currentLocale = i18n.language
 
     return (
         <Dialog>
             {/* asChild почитать для вложенніх елементов */}
             <DialogTrigger className={clsx('', TriggerClassName)} asChild>
-                <Button className="bg-orange-600 mt-4" type="submit">
-                    {t('common:contactUsSubmit')}
+                <Button
+                    className="bg-orange-600 mt-4 w-auto ml-auto"
+                    type="submit"
+                >
+                    <div className={`${currentLocale === 'ka' ? 'mt-1' : ''}`}>
+                        {t('common:contactUsSubmit')}
+                    </div>
                 </Button>
             </DialogTrigger>
             <DialogContent>
