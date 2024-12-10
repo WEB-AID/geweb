@@ -34,7 +34,7 @@ export default function Greetings() {
                     className="w-auto"
                 />
             </div>
-            <article className="w-4/5 md:w-2/5 lg:w-80 flex flex-center items-center flex-col max-[767px]:mt-4 md:ml-4 md:mr-auto md:px-0 max-[767px]:mx-auto">
+            <article className="w-4/5 md:w-2/5 lg:w-96 flex flex-center items-center flex-col max-[767px]:mt-4 md:ml-4 md:mr-auto md:px-0 max-[767px]:mx-auto">
                 <h1 className="self-start md:mb-4 text-base font-bold lg:text-xl">
                     {t('common:georgianHouse')}
                 </h1>

@@ -8,15 +8,15 @@ export default function OurAdwantages() {
 
     return (
         <section className="lg:mt-16 mt-8 md:px-24 lg:px-0 text-center font-extrabold">
-            <h2 className="w-4/5 mx-auto text-sm md:text-base lg:text-lg text-orange-600 font-extrabold">
+            <h2 className="w-4/5 mx-auto text-xs md:text-sm lg:text-base text-orange-600 font-extrabold">
                 {t('ourAdvantageFirstHeader')}
             </h2>
             <p className="w-4/5 mx-auto mt-2 text-sm md:text-base lg:text-lg font-bold text-black">
                 {t('ourAdvantageSecondHeader')}
             </p>
             {/* ADVANTAGE BLOCKS */}
-            <div className="w-4/5 mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:w-auto lg:w-4/5 xl:w-2/3">
-                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
+            <div className="w-4/5 md:w-auto lg:w-4/5 2xl:w-2/3 mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto md:p-2 lg:p-6 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
                     <Image
                         src="/iconPig64.png"
                         alt="Plant logo"
@@ -33,7 +33,7 @@ export default function OurAdwantages() {
                         </p>
                     </div>
                 </div>
-                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
+                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 lg:p-6 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
                     <Image
                         src="/iconRezept64.png"
                         alt="Plant logo"
@@ -50,7 +50,7 @@ export default function OurAdwantages() {
                         </p>
                     </div>
                 </div>
-                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
+                <div className="mx-auto p-6 flex items-center gap-2 md:w-auto lg:w-auto md:p-2 lg:p-6 md:flex-col xl:flex-row rounded-lg shadow-3xl bg-white">
                     <Image
                         src="/iconISO64.png"
                         alt="Plant logo"

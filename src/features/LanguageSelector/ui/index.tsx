@@ -24,17 +24,16 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
         event: React.ChangeEvent<HTMLSelectElement>
     ) => {
         const newLocale = event.target.value
-        const days = 30
-        const date = new Date()
-        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
-        const expires = date.toUTCString()
-        document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/;SameSite=Lax`
+        // const days = 30
+        // const date = new Date()
+        // date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+        // const expires = date.toUTCString()
+        // document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/;SameSite=Lax`
 
         if (isBurgerOpen) {
             closeBurger()
         }
 
-        // Меняем URL в зависимости от текущей локали
         if (currentLocale === i18nConfig.defaultLocale) {
             router.push('/' + newLocale + pathname)
         } else {

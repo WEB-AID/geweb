@@ -20,7 +20,7 @@ import 'swiper/css/autoplay'
 
 export default function SwiperBlock() {
     return (
-        <div className="border-4 border-orange-500 w-4/5 min-[601px]:w-[500px] md:w-[600px] xl:w-1/2 h-60 min-[601px]:h-52 md:h-3/4 flex mx-auto mt-10 lg:mt-16">
+        <div className="w-3/4 md:w-[550px] xl:w-1/2 h-auto md:h-auto mx-auto mt-10 lg:mt-16">
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -28,13 +28,14 @@ export default function SwiperBlock() {
                 slidesPerView={1}
                 navigation
                 autoplay={{
-                    delay: 2000, // Задержка в миллисекундах (3 секунды)
+                    delay: 2500, // Задержка в миллисекундах (3 секунды)
                     disableOnInteraction: false, // Не отключать автопрокрутку при взаимодействии с слайдером
                 }}
                 // pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
+                scrollbar={{ draggable: true, el: '.custom-scrollbar' }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
+                className="rounded-2xl border-4  border-orange-500 "
             >
                 <SwiperSlide>
                     <Image
@@ -43,7 +44,7 @@ export default function SwiperBlock() {
                         width="0"
                         height="0"
                         sizes="100vw"
-                        className="h-60 lg:h-96 w-full"
+                        className="h-auto w-full"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -53,7 +54,7 @@ export default function SwiperBlock() {
                         width="0"
                         height="0"
                         sizes="100vw"
-                        className="h-60 lg:h-96 w-full"
+                        className="h-auto w-full"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -63,7 +64,7 @@ export default function SwiperBlock() {
                         width="0"
                         height="0"
                         sizes="100vw"
-                        className="h-60 lg:h-96 w-full"
+                        className="h-auto w-full"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -73,10 +74,11 @@ export default function SwiperBlock() {
                         width="0"
                         height="0"
                         sizes="100vw"
-                        className="h-60 lg:h-96 w-full"
+                        className="h-auto w-full"
                     />
                 </SwiperSlide>
             </Swiper>
+            <div className="custom-scrollbar mt-4 mx-auto h-2 bg-gray-300 rounded-lg"></div>
         </div>
     )
 }
