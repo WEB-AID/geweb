@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
+import { useEffect, useState } from 'react'
 
 interface PageBannerProps {
     src: string
@@ -20,16 +21,38 @@ export default function PageBanner({ src, alt }: PageBannerProps) {
 
     const textClasses = localeStyles[currentLocale] || ''
 
+    const [scrollEffect, setScrollEffect] = useState(1)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY
+            const newScale = 1 + scrollTop * 0.0003 // Adjust scale increment
+            setScrollEffect(Math.min(newScale, 1.5)) // Limit the scale to 1.5
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
     return (
-        <div className="relative">
-            <Image
-                src={src}
-                alt={alt}
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="w-full max-[600px]:h-60 h-80 lg:h-96 xl:h-[36rem] shadow-[0px_4px_4px_rgba(255,165,0,0.3)]"
-            />
+        <div className="relative overflow-hidden h-80 lg:h-96 xl:h-[36rem]">
+            <div
+                className="absolute inset-0 transform transition-transform duration-75"
+                style={{
+                    transform: `scale(${scrollEffect})`,
+                }}
+            >
+                <Image
+                    src={src}
+                    alt={alt}
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    className="w-full h-full object-cover"
+                />
+            </div>
             <p
                 className={`w-2/3 md:w-2/5 lg:w-5/12 xl:w-2/5 absolute top-4 left-4 lg:top-6 lg:left-6 xl:top-12 xl:left-16 text-white/80 ${textClasses}`}
             >
