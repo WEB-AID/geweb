@@ -10,6 +10,7 @@ import { Header } from '@/widgets/Header'
 import { Footer } from '@/widgets/Footer'
 import Loading from './loading'
 import { ScrollCircle } from '@/features/ScrollCircle'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
     title: 'Georgian House LLC',
@@ -48,6 +49,15 @@ export default async function RootLayout({
                     href="https://fonts.cdnfonts.com/css/bpg-nino-mtavruli"
                     rel="stylesheet"
                 />
+                {/* Добавление Ionic Icons */}
+                <Script
+                    type="module"
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                ></Script>
+                <Script
+                    noModule
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                ></Script>
             </head>
             <body
                 className={clsx(

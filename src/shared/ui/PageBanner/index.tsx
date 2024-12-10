@@ -28,7 +28,7 @@ export default function PageBanner({ src, alt }: PageBannerProps) {
                 width="0"
                 height="0"
                 sizes="100vw"
-                className="w-full max-[600px]:h-60 h-80 lg:h-96 xl:h-[36rem]"
+                className="w-full max-[600px]:h-60 h-80 lg:h-96 xl:h-[36rem] shadow-[0px_4px_4px_rgba(255,165,0,0.3)]"
             />
             <p
                 className={`w-2/3 md:w-2/5 lg:w-5/12 xl:w-2/5 absolute top-4 left-4 lg:top-6 lg:left-6 xl:top-12 xl:left-16 text-white/80 ${textClasses}`}

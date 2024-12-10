@@ -9,14 +9,15 @@ import { LoginModal } from '@/features/Login'
 import { useBurgerMenuStore } from '@/entities/BurgerMenu'
 import HeaderMenu from './HeaderMenu'
 import styles from './index.module.css'
-import { useSyncHeaderMargin } from '../model/useSyncHeaderMargin'
+import { useTranslation } from 'react-i18next'
 
 export function Header() {
     const pathname = usePathname()
 
     const isBurgerOpen = useBurgerMenuStore((state) => state.isBurgerOpen)
-
-    useSyncHeaderMargin()
+    const { i18n } = useTranslation()
+    const currentLocale = i18n.language
+    console.log(currentLocale)
 
     return (
         <header

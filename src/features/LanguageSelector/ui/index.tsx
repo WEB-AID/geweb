@@ -20,7 +20,9 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
     const isBurgerOpen = useBurgerMenuStore((store) => store.isBurgerOpen)
     const closeBurger = useBurgerMenuStore((store) => store.closeBurger)
 
-    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleChange = async (
+        event: React.ChangeEvent<HTMLSelectElement>
+    ) => {
         const newLocale = event.target.value
         const days = 30
         const date = new Date()
@@ -32,11 +34,14 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
             closeBurger()
         }
 
+        // Меняем URL в зависимости от текущей локали
         if (currentLocale === i18nConfig.defaultLocale) {
             router.push('/' + newLocale + pathname)
         } else {
             router.push(pathname.replace(`/${currentLocale}`, `/${newLocale}`))
         }
+
+        router.refresh()
     }
 
     return (
