@@ -4,6 +4,7 @@ export default function Pricing() {
     return (
         <div>
             <PriceFiles />
+            <PriceFiles />
         </div>
     )
 }

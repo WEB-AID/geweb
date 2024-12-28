@@ -37,8 +37,8 @@ export function LoginModal({
                     <DialogDescription></DialogDescription>
                     <div className={clsx('', ContentBodyClassName)}>
                         <form>
-                            <input placeholder="login" />
-                            <input placeholder="pswrd" />
+                            <input placeholder="Login" />
+                            <input className="ml-2" placeholder="Password" />
                         </form>
                     </div>
                 </DialogHeader>

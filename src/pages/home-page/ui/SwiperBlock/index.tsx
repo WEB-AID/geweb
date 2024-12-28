@@ -1,12 +1,6 @@
 'use client'
 
-import {
-    Navigation,
-    Pagination,
-    Scrollbar,
-    A11y,
-    Autoplay,
-} from 'swiper/modules'
+import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules'
 import Image from 'next/image'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -23,10 +17,9 @@ export default function SwiperBlock() {
         <div className="w-3/4 md:w-[550px] xl:w-1/2 h-auto md:h-auto mx-auto mt-10 lg:mt-16">
             <Swiper
                 // install Swiper modules
-                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                modules={[Pagination, Scrollbar, A11y, Autoplay]}
                 spaceBetween={50}
                 slidesPerView={1}
-                navigation
                 autoplay={{
                     delay: 2500, // Задержка в миллисекундах (3 секунды)
                     disableOnInteraction: false, // Не отключать автопрокрутку при взаимодействии с слайдером
