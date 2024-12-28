@@ -37,7 +37,7 @@ export function ContactForm({ ModalSlot }: ContactFormProps) {
 
     return (
         <AppForm
-            className="p-4 w-3/4 md:w-2/3 lg:w-3/5 xl:w-1/2 flex flex-col mx-auto my-auto"
+            className="w-3/4 md:w-2/3 lg:w-3/5 xl:w-1/2 flex flex-col mx-auto py-8"
             onSubmit={onSubmit}
             {...formProps}
         >
@@ -45,7 +45,7 @@ export function ContactForm({ ModalSlot }: ContactFormProps) {
                 {t('common:contactUsTitle')}
             </h2>
             <div>
-                <NameField placeholder="Alex" name="name" />
+                <NameField placeholder="Mamuka" name="name" />
                 {errors.name && (
                     <p className="text-red-500 text-sm">
                         {errors.name.message}
@@ -53,7 +53,7 @@ export function ContactForm({ ModalSlot }: ContactFormProps) {
                 )}
             </div>
             <div>
-                <NameField placeholder="Richardson" name="surname" />
+                <NameField placeholder="Labidze" name="surname" />
                 {errors.surname && (
                     <p className="text-red-500 text-sm">
                         {errors.surname.message}
@@ -61,7 +61,7 @@ export function ContactForm({ ModalSlot }: ContactFormProps) {
                 )}
             </div>
             <div>
-                <PhoneField placeholder="+995-555-555-555" name="phoneNumber" />
+                <PhoneField placeholder="555-111-222" name="phoneNumber" />
                 {errors.phoneNumber && (
                     <p className="text-red-500 text-sm">
                         {errors.phoneNumber.message}
@@ -70,7 +70,7 @@ export function ContactForm({ ModalSlot }: ContactFormProps) {
             </div>
             <div>
                 <TextField
-                    placeholder="Hi! Call me please! I want to speak about pigs =)"
+                    placeholder="Hi! Call me please! ..."
                     name="message"
                     className="h-40"
                 />

@@ -16,14 +16,19 @@ export const PhoneField = ({
 
     return (
         <Input
-            onChange={(e) => field.onChange(e.target.value.replace(/\D/g, ''))} // Убираем любые символы, кроме цифр
+            onChange={(e) => {
+                const value = e.target.value
+                // Разрешаем ввод только цифр, пробелов, `+`, `-`
+                const formattedValue = value.replace(/[^0-9+\-\s]/g, '')
+                field.onChange(formattedValue)
+            }}
             value={field.value || ''}
             className={clsx(
                 'h-[40px] text-[16px] leading-[16px] rounded-[6px] w-full p-[12px] bg-bg3 border-[1px] placeholder:text-txt1 placeholder:opacity-30 placeholder:font-[500]',
                 className
             )}
             placeholder={placeholder}
-            type="text" // Используем текстовое поле, чтобы работать со строкой
+            type="text" // Используем текстовое поле, чтобы сохранить формат
             {...props}
         />
     )

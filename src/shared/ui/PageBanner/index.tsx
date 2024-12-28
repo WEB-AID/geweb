@@ -50,7 +50,7 @@ export default function PageBanner({ src, alt }: PageBannerProps) {
                     width="0"
                     height="0"
                     sizes="100vw"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full"
                 />
             </div>
             <p

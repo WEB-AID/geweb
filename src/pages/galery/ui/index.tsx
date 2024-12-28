@@ -17,6 +17,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/effect-cube'
+import PageBanner from '@/shared/ui/PageBanner'
 
 export default function Gallery() {
     const slides = [
@@ -27,47 +28,52 @@ export default function Gallery() {
     ]
 
     return (
-        <div className="w-1/2 mx-auto py-16">
-            <Swiper
-                modules={[
-                    Navigation,
-                    Pagination,
-                    Scrollbar,
-                    A11y,
-                    EffectCube,
-                    Autoplay,
-                ]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                autoplay={{
-                    delay: 2000, // Задержка в миллисекундах (3 секунды)
-                    disableOnInteraction: false, // Не отключать автопрокрутку при взаимодействии с слайдером
-                }}
-                scrollbar={{ draggable: true, el: '.custom-scrollbar' }}
-                effect="cube"
-                cubeEffect={{
-                    shadow: true,
-                    slideShadows: true,
-                    shadowOffset: 20,
-                    shadowScale: 0.94,
-                }}
-                onSlideChange={() => console.log('Slide changed')}
-                onSwiper={(swiper) => console.log('Swiper instance:', swiper)}
-            >
-                {slides.map((slide, index) => (
-                    <SwiperSlide key={index}>
-                        <Image
-                            src={slide.image}
-                            alt={slide.title}
-                            width={500}
-                            height={500}
-                            className="object-cover w-full h-auto"
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-            <div className="custom-scrollbar mt-8 h-2 bg-gray-300 rounded-lg"></div>
-        </div>
+        <>
+            <PageBanner src={'/plant1.jpg'} alt={'Plant logo'} />
+            <div className="w-1/2 mx-auto py-12">
+                <Swiper
+                    modules={[
+                        Navigation,
+                        Pagination,
+                        Scrollbar,
+                        A11y,
+                        EffectCube,
+                        Autoplay,
+                    ]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    autoplay={{
+                        delay: 2000, // Задержка в миллисекундах (3 секунды)
+                        disableOnInteraction: false, // Не отключать автопрокрутку при взаимодействии с слайдером
+                    }}
+                    scrollbar={{ draggable: true, el: '.custom-scrollbar' }}
+                    effect="cube"
+                    cubeEffect={{
+                        shadow: true,
+                        slideShadows: true,
+                        shadowOffset: 20,
+                        shadowScale: 0.94,
+                    }}
+                    onSlideChange={() => console.log('Slide changed')}
+                    onSwiper={(swiper) =>
+                        console.log('Swiper instance:', swiper)
+                    }
+                >
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <Image
+                                src={slide.image}
+                                alt={slide.title}
+                                width={500}
+                                height={500}
+                                className="object-cover w-full h-auto"
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className="custom-scrollbar mt-8 h-2 bg-gray-300 rounded-lg"></div>
+            </div>
+        </>
     )
 }

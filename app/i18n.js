@@ -9,6 +9,7 @@ export const i18nNamespaces = [
     'footer',
     'headerMenu',
     'contactPage',
+    'pricePage',
 ]
 
 export default async function initTranslations(
