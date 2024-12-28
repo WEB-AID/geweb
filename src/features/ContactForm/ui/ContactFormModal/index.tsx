@@ -15,11 +15,13 @@ import { useTranslation } from 'react-i18next'
 interface LoginModal {
     TriggerClassName?: string
     ContentBodyClassName?: string
+    isValid?: boolean // Проп для передачи
 }
 
 export function ContactFormModal({
     TriggerClassName,
     ContentBodyClassName,
+    isValid,
 }: LoginModal) {
     const { t, i18n } = useTranslation()
     const currentLocale = i18n.language
@@ -31,6 +33,7 @@ export function ContactFormModal({
                 <Button
                     className="bg-orange-600 mt-4 w-auto ml-auto"
                     type="submit"
+                    disabled={!isValid}
                 >
                     <div className={`${currentLocale === 'ka' ? 'mt-1' : ''}`}>
                         {t('common:contactUsSubmit')}
