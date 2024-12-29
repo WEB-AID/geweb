@@ -18,8 +18,8 @@ interface LoginModal {
 
 export function LoginModal({
     TriggerClassName,
-    ContentBodyClassName,
-}: LoginModal) {
+}: // ContentBodyClassName,
+LoginModal) {
     return (
         <Dialog>
             {/* asChild почитать для вложенніх елементов */}
@@ -35,12 +35,13 @@ export function LoginModal({
                 <DialogHeader>
                     <DialogTitle>Login</DialogTitle>
                     <DialogDescription></DialogDescription>
-                    <div className={clsx('', ContentBodyClassName)}>
+                    <div>Your IP is not ALLOWED.</div>
+                    {/* <div className={clsx('', ContentBodyClassName)}>
                         <form>
                             <input placeholder="Login" />
                             <input className="ml-2" placeholder="Password" />
                         </form>
-                    </div>
+                    </div> */}
                 </DialogHeader>
             </DialogContent>
         </Dialog>
